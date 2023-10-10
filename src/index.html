@@ -2,16 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Agrega enlaces a las bibliotecas de Tailwind CSS aquí -->
-    <title>Juego de Rol RPG</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Efectos.JS">
+    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Crea tu personaje</h1>
-        <!-- Aquí agregarás los campos para crear personajes -->
+
+<!----Este es el codigo que esta bien por favor Bryan no toques ya este codigo bro, es enserio-->
+<!--Este es el codigo de los objetos del carrusel-->
+    <div class="carrousel">
+        <div class="conteCarrousel">
+            <div class="itemCarrousel" id="itemCarrousel-1">
+                <div style="text-align: center;" >
+                        <img src="../src/Imagenes/R (1).gif" alt="Animacion" width="200" height="200" style="margin-top: px;">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-2">
+                <div style="text-align: center;" >
+                    <img src="../src/Imagenes/Pokemon Fuego.gif" alt="Mi Imagen" width="200" height="200" style="margin-top: px;">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-3">
+                <div style="text-align: center;" >
+                    <img src="../src/Imagenes/Pokemon tipo Planta.gif" width="200" height="200" style="margin-top: px;">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="conteCarrouselController">
+            <a href="#itemCarrousel-1">•</a>
+            <a href="#itemCarrousel-2">•</a>
+            <a href="#itemCarrousel-3">•</a>
+        </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!---Cuadro para elejir los diferentes elementos del personaje-->
+
+    <style>
+        #NombreP{
+            font-family: 'Pixelify Sans', cursive;
+        }
+
+    </style>
+        <button id="openModalButton">Abrir Ventana Emergente</button>
+    
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 id="NombreP">Elige el poder del personaje:</h1>
+                <br>
+                <br>
+                <form>
+                    <label for="poder">Poder:</label>
+                    <select id="poder" name="poder">
+                        <option value="superfuerza">Superfuerza</option>
+                        <option value="telequinesis">Telequinesis</option>
+                        <option value="invisibilidad">Invisibilidad</option>
+                        <option value="volar">Volar</option>
+                        <option value="control-del-tiempo">Control del tiempo</option>
+                    </select>
+    
+                    <br><br>
+    
+                    <input type="submit" value="Seleccionar">
+                </form>
+            </div>
+        </div>
+
+
+<!--Las animaciones de la ventana de Inicio que se desplega para elegir poderes-->
+        <script>
+            // Obtener elementos del DOM
+var modal = document.getElementById('myModal');
+var openModalButton = document.getElementById('openModalButton');
+var close = document.getElementsByClassName('close')[0];
+
+// Abrir la ventana emergente al hacer clic en el botón
+openModalButton.onclick = function() {
+    modal.style.display = 'block';
+}
+
+// Cerrar la ventana emergente al hacer clic en la "X"
+close.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Cerrar la ventana emergente al hacer clic fuera de ella
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+        </script>
+
+
+
+
+
+
+
+     <!-- Botón que redirige a otra página -->
+     <br>
+     <br>
+     <div style="text-align: center;" >
+         <a href="http://127.0.0.1:5501/index.html" class="button">Ir a Otra Página</a>
+     </div>
+
 </body>
 </html>

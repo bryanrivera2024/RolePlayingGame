@@ -42,3 +42,5 @@ class Jugador extends Personaje {
 document.addEventListener("DOMContentLoaded", () => {
     // Aquí puedes escribir el código para crear y gestionar personajes
 });
+
+
